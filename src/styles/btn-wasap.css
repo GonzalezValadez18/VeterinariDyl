@@ -1,0 +1,133 @@
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    animation: breathe 2s ease-in-out infinite;
+    overflow: visible;
+    text-decoration: none;
+    /* Permite que el texto salga fuera */
+}
+
+.whatsapp-btn .whatsapp-text {
+    opacity: 0;
+    position: absolute;
+    right: 70px;
+    white-space: nowrap;
+    background: #25D366;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    pointer-events: none;
+    transform: translateX(20px);
+    transition: opacity 0.3s, transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.whatsapp-btn:hover .whatsapp-text,
+.whatsapp-btn:focus .whatsapp-text {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/*Estilos solo al icono whatsapp*/
+.whatsapp-btn i {
+    color: #fff;
+    font-size: 24px;
+    animation: beat 2s ease-in-out infinite;
+    text-decoration: none;
+}
+
+/*Estilos con animation contorno respirando*/
+@keyframes breathe {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+
+/*Estilos de animacion del icono latiendo*/
+@keyframes beat {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Mostrar siempre el texto sobre el botón en móviles */
+@media (max-width: 767px) {
+
+    .whatsapp-btn .whatsapp-text,
+    .whatsapp-btn:hover .whatsapp-text,
+    .whatsapp-btn:focus .whatsapp-text {
+        opacity: 1 !important;
+        transform: rotate(180deg) !important;
+        transition: none !important;
+    }
+
+    .whatsapp-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 0;
+        width: 50px;
+        height: 140px;
+        border-radius: 20px 0 0 20px;
+        background: #25D366;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        padding: 0;
+        text-decoration: none;
+    }
+
+    .whatsapp-btn .whatsapp-text {
+        opacity: 1 !important;
+        position: static;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        background: transparent;
+        color: #fff;
+        padding: 0;
+        font-size: 14px;
+        border-radius: 0;
+        box-shadow: none;
+        pointer-events: none;
+        transition: none;
+        text-align: center;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        font-weight: bold;
+    }
+
+    .whatsapp-btn i {
+        display: none;
+    }
+}

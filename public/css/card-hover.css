@@ -1,0 +1,60 @@
+/* Oculta el contenido por defecto */
+#card1 .card-info,
+#card2 .card-info,
+#card3 .card-info {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+/* Hover solo en escritorio */
+@media (hover: hover) {
+
+    #card1:hover,
+    #card2:hover,
+    #card3:hover {
+        transform: scale(1.05);
+        z-index: 2;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    #card1:hover .card-info,
+    #card2:hover .card-info,
+    #card3:hover .card-info {
+        max-height: 250px;
+    }
+}
+
+/* En móviles: dropdown por clic usando checkbox hack */
+@media (hover: none) and (pointer: coarse) {
+    .toggle-card:checked~.card-body .card-info {
+        max-height: 250px;
+    }
+
+    /* Opcional: oculta el contenido por defecto en móviles */
+    #card1 .card-info,
+    #card2 .card-info,
+    #card3 .card-info {
+        max-height: 0;
+    }
+}
+
+/* Asegura que los bullets se muestren en listas dentro de cards en desktop */
+@media (min-width: 768px) {
+
+    .card-info ul,
+    .card-body ul {
+        list-style-type: disc !important;
+        list-style-position: inside !important;
+        padding-left: 1.5em !important;
+        text-align: left !important;
+    }
+}
+
+.card-img-top.img-uniforme {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin: 1.5rem auto 0 auto;
+    display: block;
+}

@@ -1,0 +1,12 @@
+@import url('./styles/body.css');
+@import url('./styles/personality-classes.css');
+@import url('./styles/variables.css');
+@import url('./styles/slider-gallery.css');
+@import url('./styles/btn-wasap.css');
+@import url('./styles/card-hover.css');
+
+#map {
+    height: 300px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

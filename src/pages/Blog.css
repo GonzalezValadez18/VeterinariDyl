@@ -1,0 +1,318 @@
+/* d:\Downloads\dyl\dyl-veterinaria\src\pages\Blog.css */
+
+.blog-container {
+    max-width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-title {
+    text-align: center;
+    color: var(--vet-secondary-color);
+    /* Un azul veterinario amigable */
+    margin-bottom: 30px;
+}
+
+.all-posts-link {
+    display: block;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.1em;
+    text-decoration: none;
+    color: var(--vet-gray-color);
+    transition: all 0.7s ease-in-out;
+    /* Color de enlace estándar */
+}
+
+.all-posts-link:hover {
+    color: var(--vet-gray-strong-color);
+    scale: 1.08;
+    transition: all 0.7s ease-in-out;
+    
+    /* Color al pasar el ratón */
+}
+
+.blog-post-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    /* Para contener la imagen si es muy grande */
+}
+
+.blog-post-card h2 a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.5em;
+}
+
+.blog-post-card h2 a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.blog-post-card p.summary {
+    color: #555;
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
+.blog-post-image {
+    width: 100%;
+    max-height: 250px;
+    /* Ajusta según prefieras */
+    object-fit: cover;
+    /* Para que la imagen cubra el área sin distorsionarse */
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.status-message {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.1em;
+    color: #777;
+}
+/* Añade estos estilos a tu archivo Blog.css 21*/
+
+/* Estilos para el post más reciente */
+.latest-post-card {
+    margin-bottom: 40px;
+    /* Espacio antes de los posts más antiguos */
+    padding: 20px;
+    background-color: #f9f9f9;
+    /* Un fondo ligero si se desea */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.latest-post-image-container {
+    width: 100%;
+    max-height: 450px;
+    /* Altura máxima para la imagen principal */
+    overflow: hidden;
+    /* Asegura que la imagen no desborde si es más grande */
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.latest-post-card .blog-post-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Asegura que la imagen cubra el contenedor, puede recortar si las proporciones no coinciden */
+    display: block;
+    /* Elimina espacio extra debajo de la imagen */
+}
+
+.latest-post-card h2 {
+    font-size: 2em;
+    /* Título más grande */
+    margin-top: 0;
+    /* Ajustar si la imagen está arriba */
+    margin-bottom: 10px;
+}
+
+.latest-post-card h2 a {
+    color: #333;
+    text-decoration: none;
+}
+
+.latest-post-card h2 a:hover {
+    color: #007bff;
+}
+
+.latest-post-card .summary {
+    font-size: 1.1em;
+    /* Resumen ligeramente más grande */
+    line-height: 1.6;
+}
+
+/* Contenedor y título para los posts más antiguos */
+.older-posts-container {
+    margin-top: 30px;
+}
+
+.older-posts-title {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    text-align: left;
+    color: #444;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Estilos para cada card de post antiguo */
+.older-post-card {
+    display: flex;
+    gap: 20px;
+    /* Espacio entre imagen y contenido */
+    margin-bottom: 25px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease;
+}
+
+.older-post-card:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.older-post-card .blog-post-image {
+    width: 150px;
+    /* Ancho fijo para la imagen pequeña */
+    height: 100px;
+    /* Alto fijo para la imagen pequeña */
+    object-fit: cover;
+    /* Cubre el área, mantiene aspect ratio, puede recortar */
+    border-radius: 4px;
+    flex-shrink: 0;
+    /* Evita que la imagen se encoja */
+}
+
+.older-post-content {
+    flex-grow: 1;
+    /* El contenido textual ocupa el espacio restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Centra el contenido verticalmente si hay espacio */
+}
+
+.older-post-card h2 {
+    font-size: 1.3em;
+    /* Título más pequeño para posts antiguos */
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.older-post-card h2 a {
+    color: #333;
+    text-decoration: none;
+}
+
+.older-post-card h2 a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.older-post-card .summary {
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Ajustes responsivos (opcional, ejemplo) */
+@media (max-width: 768px) {
+    .blog-container {
+        padding: 15px;
+        margin: 10px auto;
+    }
+
+    .blog-title {
+        font-size: 1.8em; /* Reducir tamaño del título principal */
+        margin-bottom: 20px;
+    }
+
+    .all-posts-link {
+        font-size: 1em; /* Reducir tamaño del enlace a todos los posts */
+        margin-bottom: 20px;
+    }
+
+    .latest-post-card {
+        padding: 15px; /* Reducir padding del post más reciente */
+    }
+
+    .latest-post-image-container {
+        max-height: 250px; /* Reducir altura máxima de la imagen principal */
+    }
+
+    .older-post-card {
+        flex-direction: column;
+        /* Apila imagen y texto en pantallas pequeñas */
+        align-items: center;
+        /* Centra la imagen cuando está apilada */
+    }
+
+    .older-post-card .blog-post-image {
+        width: 80%;
+        /* Imagen más ancha en modo columna */
+        height: auto;
+        /* Altura automática para mantener proporción */
+        max-height: 180px;
+        margin-bottom: 15px;
+    }
+
+    .older-post-content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .older-post-card h2 {
+        font-size: 1.15em; /* Ajustar tamaño de título en posts antiguos */
+    }
+
+    .latest-post-card h2 {
+        font-size: 1.6em; /* Reducir tamaño de título del post más reciente */
+    }
+
+    .latest-post-card .summary {
+        font-size: 1em; /* Reducir tamaño del resumen del post más reciente */
+    }
+
+    .older-posts-title {
+        font-size: 1.5em; /* Reducir tamaño del título "Entradas Anteriores" */
+        margin-bottom: 20px;
+    }
+}
+
+.skeleton-container {
+    margin: 2rem 0;
+}
+
+.skeleton {
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    animation: pulse 1.5s infinite;
+    margin-bottom: 1rem;
+}
+
+.skeleton-title {
+    width: 60%;
+    height: 24px;
+}
+
+.skeleton-image {
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+}
+
+.skeleton-text {
+    height: 16px;
+    width: 100%;
+}
+
+.skeleton-text.short {
+    width: 80%;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

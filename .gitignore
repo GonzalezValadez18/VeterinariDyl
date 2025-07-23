@@ -1,0 +1,29 @@
+# node_modules (carpeta de dependencias, muy pesada y no necesaria en git)
+node_modules/
+
+# Build final (Vite genera dist/ al hacer build)
+dist/
+
+# Archivos de logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Sistemas operativos (opcional pero recomendable)
+.DS_Store           # MacOS
+Thumbs.db           # Windows
+
+# Editor de texto / IDE
+.vscode/
+.idea/
+
+# Archivos de entorno (no subir variables secretas)
+.env
+.env.*              # .env.local, .env.production, etc.
+
+# Cache de Vite
+.vite/
+
+# Salidas temporales
+*.local

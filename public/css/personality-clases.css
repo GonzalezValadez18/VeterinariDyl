@@ -1,0 +1,35 @@
+/*Altura al doble de un elemento*/
+.height-200 {
+    height: 200px !important;
+}
+.dropdown-menu {
+    background-color: var(--vet-primary-color) !important;
+    color: black !important;
+    border: 0 !important;
+}
+
+.dropdown-item{
+    color: black !important;
+}
+.dropdown-item:hover {
+    background-color: var(--vet-secondary-color) !important;
+}
+.bg-vet-primary {
+    background-color: var(--vet-primary-color);
+}
+
+.btn-vet {
+    background-color: var(--vet-primary-color);
+    /* tu color primario */
+    color: #212529;
+    width: 5rem;
+}
+
+.btn-vet:hover {
+    background-color: var(--vet-secondary-color);
+    color: #fff;
+}
+
+.bg-section{
+    background-color: var(--vet-tertiary-color);
+}

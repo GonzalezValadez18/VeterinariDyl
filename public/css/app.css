@@ -1,0 +1,13 @@
+@import url(body.css);
+@import url(personality-clases.css);
+@import url(variables.css);
+@import url(slider-gallery.css);
+@import url(btn-wasap.css);
+@import url(card-hover.css);
+@import url(../leaflet/leaflet.css);
+
+#map {
+    height: 300px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
