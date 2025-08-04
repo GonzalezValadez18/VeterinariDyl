@@ -1,41 +1,17 @@
-const mapa = L.map("map").setView([19.297977207896675, -98.89434270424275], 16);
-
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: "© OpenStreetMap contributors",
 }).addTo(mapa);
 
-const lugares = [
-    {
-        nombre: "Dyl Santa Barbara",
-        coords: [19.297977207896675, -98.89434270424275],
-    },
+// Coordenadas aproximadas de ambas colonias
+const coordsSantaBarbara = [19.305, -98.892];
+const coordsHornos = [19.315, -98.88];
+
+// Cálculo del punto medio
+const centro = [
+    (coordsSantaBarbara[0] + coordsHornos[0]) / 2,
+    (coordsSantaBarbara[1] + coordsHornos[1]) / 2,
 ];
 
-lugares.forEach((lugar) => {
-    const marker = L.marker(lugar.coords)
-        .addTo(mapa)
-        .bindPopup(
-            `<strong>${
-                lugar.nombre
-            }</strong><br><a href="#" class="abrir-maps" data-coords="${lugar.coords.join(
-                ","
-            )}">Ver en Google Maps</a>`
-        );
+// Crear el mapa centrado en el punto medio
+const mapa = L.map("map").setView(centro, 14);
 
-    marker.on("popupopen", function (e) {
-        const popup = e.popup;
-        setTimeout(() => {
-            const link = document.querySelector(".abrir-maps");
-            if (link) {
-                link.onclick = function (ev) {
-                    ev.preventDefault();
-                    const coords = this.getAttribute("data-coords");
-                    window.open(
-                        `https://www.google.com/maps/dir/?api=1&destination=${coords}`,
-                        "_blank"
-                    );
-                };
-            }
-        }, 100);
-    });
-});

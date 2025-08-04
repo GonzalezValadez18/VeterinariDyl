@@ -78,7 +78,11 @@ const Header = () => {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" href="#about-me" onClick={handleCloseNavbar}>
+                                <a
+                                    className="nav-link active"
+                                    href="#about-me"
+                                    onClick={handleCloseNavbar}
+                                >
                                     Nosotros
                                 </a>
                             </li>
@@ -130,6 +134,15 @@ const Header = () => {
                                             onClick={handleCloseNavbar}
                                         >
                                             Estetica canina
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            className="dropdown-item"
+                                            to="/esterilizacion"
+                                            onClick={handleCloseNavbar}
+                                        >
+                                            Esterilización
                                         </Link>
                                     </li>
                                 </ul>

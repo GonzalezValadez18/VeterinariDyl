@@ -28,8 +28,7 @@ const AboutMe = () => {
                         A lo largo de mi experiencia profesional, he participado
                         activamente en campañas de esterilización, vacunación,
                         desparasitación y atención médica general. Además,
-                        cuento con conocimientos en cirugía, oftalmología y
-                        estética canina.
+                        cuento con conocimientos en estética canina.
                     </p>
                     <p className="fs-5">
                         Mi objetivo es ser una aliada confiable para las

@@ -10,15 +10,16 @@ const Footer = () => {
                     {/* Facebook */}
                     <a
                         data-mdb-ripple-init
-                        className="btn btn-link btn-floating btn-lg text-body m-1"
-                        href="#!"
+                        className="btn btn-link btn-floating btn-lg text-body m-1 target-blank"
+                        href="https://www.facebook.com/share/15JUKZWoEA/"
+                        target="_blank"
                         role="button"
                         data-mdb-ripple-color="dark"
                     >
                         <i className="fab fa-facebook-f"></i>
                     </a>
 
-                    <a
+                    {/*<a
                         data-mdb-ripple-init
                         className="btn btn-link btn-floating btn-lg text-body m-1"
                         href="#!"
@@ -46,7 +47,7 @@ const Footer = () => {
                         data-mdb-ripple-color="dark"
                     >
                         <i className="fab fa-instagram"></i>
-                    </a>
+                    </a>*/}
 
                     <a
                         data-mdb-ripple-init
@@ -63,10 +64,7 @@ const Footer = () => {
                 className="text-center p-3"
                 style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}
             >
-                <p className="text-body">
-                    {" "}
-                    © 2025 Copyright: Dyl Veterinaria
-                </p>
+                <p className="text-body"> © 2025 Copyright: Dyl Veterinaria</p>
             </div>
         </footer>
     );

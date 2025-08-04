@@ -2,9 +2,9 @@ import React from "react";
 import MapComponent from "../../components/MapComponent";
 import WhatsAppButton from "../../components/WhatsAppButton";
 
-const Consulta = () => {
+const Esterilizacion = () => {
     const whatsappMessage =
-        "Hola, buenas tardes, me gustaria agendar una consulta general para mi mascota 🐶🐱";
+        "Hola, buenas tardes, me gustaría agendar una cita para esterilización de mi mascota. 🐶🐱";
 
     return (
         <>
@@ -12,21 +12,21 @@ const Consulta = () => {
             <div className="position-relative overflow-hidden">
                 <div className="d-block d-md-none w-100 of-hidden height-200">
                     <img
-                        src="/assets/banner/banner-consulta.webp"
+                        src="/assets/banner/banner-esterilizacion.webp"
                         className="w-100 h-100"
                         style={{ objectFit: "cover", objectPosition: "center" }}
-                        alt="Banner consulta veterinaria"
+                        alt="Banner esterilización veterinaria"
                     />
                 </div>
                 <img
-                    src="/assets/banner/banner-consulta.webp"
+                    src="/assets/banner/banner-esterilizacion.webp"
                     className="img-fluid w-100 d-none d-md-block"
-                    alt="Banner consulta veterinaria"
+                    alt="Banner esterilización veterinaria"
                 />
                 <div className="card bg-dark bg-opacity-50 position-absolute position-md-relative top-50 start-0 translate-middle-y text-white rounded ms-0 ms-md-0 col-12 col-md-6 text-center h-100 w-100">
                     <div className="card-body fs-3 d-flex flex-column justify-content-center align-items-center h-100">
                         <p className="card-text col-md-6 fs-1 fw-bold">
-                            Consulta General
+                            Esterilización
                         </p>
                     </div>
                 </div>
@@ -37,94 +37,82 @@ const Consulta = () => {
                 <div className="row flex-column flex-md-row align-items-center">
                     <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-end mb-4 mb-md-0">
                         <img
-                            src="/assets/servicios/consulta.webp"
-                            className="rounded-circle w-75 w-md-50"
-                            alt="Consulta veterinaria"
+                            src="/assets/servicios/esterilizacion-3.webp"
+                            className="w-75 w-md-50"
+                            alt="Perro y gato juntos"
                         />
                     </div>
                     <div className="col-12 col-md-6 d-flex flex-column align-items-center text-center">
                         <h2 className="text-info fs-1 fw-bold">
-                            Consulta General Veterinaria
+                            Un Acto de Amor y Responsabilidad
                         </h2>
                         <p className="mt-3 px-3 px-md-0">
-                            Evaluamos la salud de tu mascota con atención
-                            personalizada para diagnosticar, tratar y prevenir
-                            enfermedades. Nuestro enfoque integral garantiza el
-                            bienestar de tu compañero peludo.
+                            La esterilización es una de las decisiones más
+                            importantes que puedes tomar por la salud y
+                            bienestar de tu mascota. No solo ayuda a controlar
+                            la sobrepoblación animal, sino que también previene
+                            enfermedades graves y mejora su comportamiento.
                         </p>
                     </div>
                 </div>
             </div>
 
-            {/* Services Included */}
+            {/* Benefits Section */}
             <div className="container mt-5 bg-light">
                 <div className="row p-5">
-                    <div className="col-12 d-flex flex-column align-items-center text-center justify-content-center m-auto">
-                        <h2 className="text-info fs-1 fw-bold">
-                            ¿Qué incluye una consulta general?
-                        </h2>
-                        <div className="row mt-4">
-                            <div className="col-md-6">
-                                <ul className="fs-5 text-start">
-                                    <li>Examen físico completo</li>
-                                    <li>Revisión de signos vitales</li>
-                                    <li>
-                                        Evaluación del peso y condición corporal
-                                    </li>
-                                    <li>Revisión de ojos, oídos y boca</li>
-                                </ul>
-                            </div>
-                            <div className="col-md-6">
-                                <ul className="fs-5 text-start">
-                                    <li>Palpación abdominal</li>
-                                    <li>Auscultación cardíaca y pulmonar</li>
-                                    <li>Revisión de piel y pelaje</li>
-                                    <li>Recomendaciones de cuidado</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* When to visit */}
-            <div className="container mt-5">
-                <div className="row">
                     <div className="col-12 text-center">
-                        <h2 className="text-info fs-1 fw-bold">
-                            ¿Cuándo traer a tu mascota?
+                        <h2 className="text-info fs-1 fw-bold mb-5">
+                            Beneficios de la Esterilización
                         </h2>
-                        <div className="row mt-4 d-flex justify-content-center gap-3">
+                        <div className="row d-flex justify-content-center gap-4">
                             <div className="card" style={{ width: "18rem" }}>
+                                <img
+                                    src="/assets/servicios/esterilizacion-2.webp"
+                                    className="card-img-top rounded-circle p-3"
+                                    alt="Prevención de enfermedades"
+                                />
                                 <div className="card-body">
                                     <h5 className="card-title text-info">
-                                        Chequeos Preventivos
+                                        Prevención de Enfermedades
                                     </h5>
                                     <p className="card-text">
-                                        Revisiones anuales o semestrales para
-                                        mantener la salud óptima
+                                        Reduce el riesgo de cáncer de mama,
+                                        útero, ovarios y testículos, así como
+                                        infecciones uterinas (piómetra).
                                     </p>
                                 </div>
                             </div>
                             <div className="card" style={{ width: "18rem" }}>
+                                <img
+                                    src="/assets/servicios/esterilizacion-1.webp"
+                                    className="card-img-top rounded-circle p-3"
+                                    alt="Mejora del comportamiento"
+                                />
                                 <div className="card-body">
                                     <h5 className="card-title text-info">
-                                        Síntomas de Enfermedad
+                                        Mejora del Comportamiento
                                     </h5>
                                     <p className="card-text">
-                                        Vómitos, diarrea, pérdida de apetito,
-                                        letargo o cambios de comportamiento
+                                        Disminuye la agresividad, el marcaje con
+                                        orina, las fugas en busca de pareja y el
+                                        comportamiento de monta.
                                     </p>
                                 </div>
                             </div>
                             <div className="card" style={{ width: "18rem" }}>
+                                <img
+                                    src="/assets/servicios/esterilizacion-4.webp"
+                                    className="card-img-top rounded-circle p-3"
+                                    alt="Control de sobrepoblación"
+                                />
                                 <div className="card-body">
                                     <h5 className="card-title text-info">
-                                        Seguimiento
+                                        Control de Sobrepoblación
                                     </h5>
                                     <p className="card-text">
-                                        Control post-tratamiento o monitoreo de
-                                        condiciones crónicas
+                                        Evita camadas no deseadas, contribuyendo
+                                        a reducir el número de animales
+                                        abandonados en las calles.
                                     </p>
                                 </div>
                             </div>
@@ -141,7 +129,7 @@ const Consulta = () => {
                 <div className="d-block mt-3">
                     <div className="accordion" id="accordionFaq">
                         <div className="accordion-item">
-                            <h2 className="accordion-header" id="headingfaq1">
+                            <h2 className="accordion-header" id="headingFaq1">
                                 <button
                                     className="accordion-button collapsed"
                                     type="button"
@@ -151,8 +139,8 @@ const Consulta = () => {
                                     aria-controls="collapseFaq1"
                                 >
                                     <strong>
-                                        ¿Con qué frecuencia debo traer a mi
-                                        mascota a consulta?
+                                        ¿Mi mascota cambiará su personalidad o
+                                        se volverá perezosa?
                                     </strong>
                                 </button>
                             </h2>
@@ -163,15 +151,19 @@ const Consulta = () => {
                                 data-bs-parent="#accordionFaq"
                             >
                                 <div className="accordion-body">
-                                    Se recomienda una consulta anual para
-                                    mascotas jóvenes y sanas, y cada 6 meses
-                                    para mascotas mayores de 7 años o con
-                                    condiciones de salud específicas.
+                                    No, la esterilización no cambia la
+                                    personalidad de tu mascota. Puede que notes
+                                    una disminución en comportamientos ligados a
+                                    las hormonas (como marcaje o agresividad),
+                                    pero su carácter seguirá intacto. El aumento
+                                    de peso se controla con una dieta adecuada y
+                                    ejercicio, no es un efecto directo de la
+                                    cirugía.
                                 </div>
                             </div>
                         </div>
                         <div className="accordion-item">
-                            <h2 className="accordion-header" id="headingfaq2">
+                            <h2 className="accordion-header" id="headingFaq2">
                                 <button
                                     className="accordion-button collapsed"
                                     type="button"
@@ -181,7 +173,8 @@ const Consulta = () => {
                                     aria-controls="collapseFaq2"
                                 >
                                     <strong>
-                                        ¿Qué debo traer a la consulta?
+                                        ¿La cirugía de esterilización es
+                                        peligrosa?
                                     </strong>
                                 </button>
                             </h2>
@@ -192,15 +185,17 @@ const Consulta = () => {
                                 data-bs-parent="#accordionFaq"
                             >
                                 <div className="accordion-body">
-                                    Trae la cartilla de vacunación, cualquier
-                                    medicamento que esté tomando, y una lista de
-                                    preguntas o preocupaciones que tengas sobre
-                                    tu mascota.
+                                    Es una de las cirugías más comunes y seguras
+                                    en veterinaria. Como en cualquier
+                                    procedimiento, existe un riesgo mínimo, pero
+                                    utilizamos anestesia moderna y monitoreo
+                                    constante para garantizar la máxima
+                                    seguridad de tu mascota.
                                 </div>
                             </div>
                         </div>
                         <div className="accordion-item">
-                            <h2 className="accordion-header" id="headingfaq3">
+                            <h2 className="accordion-header" id="headingFaq3">
                                 <button
                                     className="accordion-button collapsed"
                                     type="button"
@@ -210,7 +205,8 @@ const Consulta = () => {
                                     aria-controls="collapseFaq3"
                                 >
                                     <strong>
-                                        ¿Cuánto tiempo dura una consulta?
+                                        ¿Mi mascota sufrirá mucho dolor después
+                                        de la operación?
                                     </strong>
                                 </button>
                             </h2>
@@ -221,9 +217,76 @@ const Consulta = () => {
                                 data-bs-parent="#accordionFaq"
                             >
                                 <div className="accordion-body">
-                                    Una consulta general típica dura entre 20 a
-                                    30 minutos, dependiendo de las necesidades
-                                    específicas de tu mascota.
+                                    Manejamos el dolor de forma proactiva. Tu
+                                    mascota recibirá analgésicos antes, durante
+                                    y después de la cirugía. Te daremos
+                                    medicación e indicaciones claras para que su
+                                    recuperación en casa sea lo más cómoda
+                                    posible.
+                                </div>
+                            </div>
+                        </div>
+                        <div className="accordion-item">
+                            <h2 className="accordion-header" id="headingFaq4">
+                                <button
+                                    className="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFaq4"
+                                    aria-expanded="false"
+                                    aria-controls="collapseFaq4"
+                                >
+                                    <strong>
+                                        ¿Cuál es la mejor edad para esterilizar?
+                                    </strong>
+                                </button>
+                            </h2>
+                            <div
+                                id="collapseFaq4"
+                                className="accordion-collapse collapse"
+                                aria-labelledby="headingFaq4"
+                                data-bs-parent="#accordionFaq"
+                            >
+                                <div className="accordion-body">
+                                    Generalmente, se recomienda antes del primer
+                                    celo (alrededor de los 6 meses). Sin
+                                    embargo, el momento ideal puede variar según
+                                    la raza y tamaño. Lo mejor es consultarnos
+                                    para determinar el momento más adecuado para
+                                    tu compañero.
+                                </div>
+                            </div>
+                        </div>
+                        <div className="accordion-item">
+                            <h2 className="accordion-header" id="headingFaq5">
+                                <button
+                                    className="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFaq5"
+                                    aria-expanded="false"
+                                    aria-controls="collapseFaq5"
+                                >
+                                    <strong>
+                                        ¿Qué cuidados necesitará mi mascota
+                                        después de la cirugía?
+                                    </strong>
+                                </button>
+                            </h2>
+                            <div
+                                id="collapseFaq5"
+                                className="accordion-collapse collapse"
+                                aria-labelledby="headingFaq5"
+                                data-bs-parent="#accordionFaq"
+                            >
+                                <div className="accordion-body">
+                                    La recuperación es rápida. Los cuidados
+                                    principales son: restringir el ejercicio
+                                    intenso por 7-10 días, evitar que se lama la
+                                    herida (con un collar isabelino si es
+                                    necesario) y administrar la medicación que
+                                    te indiquemos. Te daremos todas las
+                                    instrucciones detalladas.
                                 </div>
                             </div>
                         </div>
@@ -266,4 +329,4 @@ const Consulta = () => {
     );
 };
 
-export default Consulta;
+export default Esterilizacion;

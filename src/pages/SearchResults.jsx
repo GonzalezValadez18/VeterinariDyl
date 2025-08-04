@@ -66,7 +66,7 @@ const SearchResults = () => {
                 "mision",
                 "vision",
                 "acerca de",
-                "sobre mi"
+                "sobre mi",
             ],
         },
         {
@@ -81,6 +81,24 @@ const SearchResults = () => {
                 "pedir hora",
                 "calendario veterinario",
                 "programar visita",
+                "ubicacion",
+            ],
+        },
+        {
+            id: "esterilization",
+            name: "Esterilización",
+            path: "/esterilizacion", // Esto apunta a un ancla en la página de inicio. Si tienes una página /citas, cámbialo.
+            description:
+                "La esterilización es una de las decisiones más importantes que puedes tomar por la salud y bienestar de tu mascota.",
+            type: "info",
+            keywords: [
+                "esterilización",
+                "castración",
+                "prevención enfermedades",
+                "control de población animal",
+                "beneficios esterilización",    
+                "beneficios esterilización mascota",
+                "esteril"
             ],
         },
         // Agrega más items aquí para otras secciones de tu página
