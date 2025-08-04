@@ -8,7 +8,7 @@ const Blog = () => {
 
     useEffect(() => {
         const bloggerFeed =
-            "https://dyl-veterinaria-blog.blogspot.com/feeds/posts/default?alt=rss";
+            "https://dyl-cuidando-huellitas.blogspot.com/feeds/posts/default?alt=rss";
         const proxyUrl =
             "https://api.allorigins.win/raw?url=" +
             encodeURIComponent(bloggerFeed);
@@ -73,7 +73,7 @@ const Blog = () => {
         <div className="blog-container">
             <h1 className="blog-title">Nuestro Blog</h1>
             <a
-                href="https://dyl-veterinaria-blog.blogspot.com/"
+                href="https://dyl-cuidando-huellitas.blogspot.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="all-posts-link"
