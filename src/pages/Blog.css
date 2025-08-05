@@ -1,49 +1,56 @@
-/* d:\Downloads\dyl\dyl-veterinaria\src\pages\Blog.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Paleta de colores moderna y elegante */
+:root {
+    --blog-font-family: 'Poppins', sans-serif;
+    --blog-primary-color: #3498db; /* Un azul más vibrante y moderno */
+    --blog-text-color: #2c3e50; /* Un gris oscuro para el texto, más suave que el negro */
+    --blog-text-light-color: #7f8c8d; /* Un gris más claro para resúmenes */
+    --blog-bg-color: #f8f9fa; /* Un fondo global muy claro */
+    --blog-card-bg-color: #ffffff;
+    --blog-border-color: #ecf0f1;
+}
 
 .blog-container {
-    max-width: 900px;
+    font-family: var(--blog-font-family);
+    max-width: 960px;
     margin: 20px auto;
-    background: #fff;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: var(--blog-bg-color);
+    padding: 30px;
+    border-radius: 12px;
 }
 
 .blog-title {
     text-align: center;
-    color: var(--vet-secondary-color);
-    /* Un azul veterinario amigable */
-    margin-bottom: 30px;
+    color: var(--blog-text-color);
+    font-weight: 700;
+    font-size: 2.8em;
+    margin-bottom: 15px;
 }
 
 .all-posts-link {
     display: block;
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
     font-size: 1.1em;
     text-decoration: none;
-    color: var(--vet-gray-color);
-    transition: all 0.7s ease-in-out;
-    /* Color de enlace estándar */
+    color: var(--blog-primary-color);
+    font-weight: 600;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .all-posts-link:hover {
-    color: var(--vet-gray-strong-color);
-    scale: 1.08;
-    transition: all 0.7s ease-in-out;
-    
-    /* Color al pasar el ratón */
+    color: var(--blog-text-color);
+    transform: translateY(-2px);
 }
 
 .blog-post-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
+    background-color: var(--blog-card-bg-color);
+    border-radius: 12px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     overflow: hidden;
-    /* Para contener la imagen si es muy grande */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .blog-post-card h2 a {
@@ -58,7 +65,7 @@
 }
 
 .blog-post-card p.summary {
-    color: #555;
+    color: var(--blog-text-light-color);
     line-height: 1.6;
     margin-top: 8px;
 }
@@ -68,7 +75,7 @@
     max-height: 250px;
     /* Ajusta según prefieras */
     object-fit: cover;
-    /* Para que la imagen cubra el área sin distorsionarse */
+    /* Cubre el área sin distorsionar */
     border-radius: 4px;
     margin-bottom: 15px;
 }
@@ -80,26 +87,25 @@
     color: #777;
 }
 /* Añade estos estilos a tu archivo Blog.css 21*/
-
 /* Estilos para el post más reciente */
 .latest-post-card {
     margin-bottom: 40px;
-    /* Espacio antes de los posts más antiguos */
+    padding: 0; /* El padding se manejará en el contenido */
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     padding: 20px;
-    background-color: #f9f9f9;
-    /* Un fondo ligero si se desea */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.latest-post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
 .latest-post-image-container {
     width: 100%;
-    max-height: 450px;
-    /* Altura máxima para la imagen principal */
+    max-height: 400px;
     overflow: hidden;
-    /* Asegura que la imagen no desborde si es más grande */
-    margin-bottom: 20px;
-    border-radius: 8px;
+    border-radius: 12px 12px 0 0; /* Redondea solo las esquinas superiores */
 }
 
 .latest-post-card .blog-post-image {
@@ -107,30 +113,32 @@
     height: 100%;
     object-fit: contain; /* Asegura que la imagen cubra el contenedor, puede recortar si las proporciones no coinciden */
     display: block;
-    /* Elimina espacio extra debajo de la imagen */
+    margin-bottom: 0;
+}
+
+.latest-post-content {
+    padding: 30px;
 }
 
 .latest-post-card h2 {
-    font-size: 2em;
-    /* Título más grande */
+    font-size: 2.2em;
+    font-weight: 700;
     margin-top: 0;
-    /* Ajustar si la imagen está arriba */
     margin-bottom: 10px;
 }
 
 .latest-post-card h2 a {
-    color: #333;
+    color: var(--blog-text-color);
     text-decoration: none;
 }
 
 .latest-post-card h2 a:hover {
-    color: #007bff;
+    color: var(--blog-primary-color);
 }
 
 .latest-post-card .summary {
     font-size: 1.1em;
-    /* Resumen ligeramente más grande */
-    line-height: 1.6;
+    color: var(--blog-text-light-color);
 }
 
 /* Contenedor y título para los posts más antiguos */
