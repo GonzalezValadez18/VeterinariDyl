@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Blog.css"; // Importa los estilos CSS
+import "./Blog.css"; 
 
 const Blog = () => {
     const [posts, setPosts] = useState([]);
@@ -7,63 +7,68 @@ const Blog = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        const bloggerFeed =
-            "https://dyl-cuidando-huellitas.blogspot.com/feeds/posts/default?alt=rss";
-        const proxyUrl =
-            "https://api.allorigins.win/raw?url=" +
-            encodeURIComponent(bloggerFeed);
+        const fetchPosts = async () => {
+            // NOTA: La lentitud se debe al uso de este proxy.
+            // Realiza un doble salto: Navegador -> Proxy (allorigins) -> Blogger.
+            // La solución ideal es crear un endpoint en un backend propio que haga caching.
+            const bloggerFeed =
+                "https://dyl-cuidando-huellitas.blogspot.com/feeds/posts/default?alt=rss";
+            const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(
+                bloggerFeed
+            )}`;
 
-        fetch(proxyUrl)
-            .then((response) => {
-                if (!response.ok)
+            try {
+                // Reseteamos estados al iniciar la carga
+                setError(null);
+                setLoading(true);
+
+                const response = await fetch(proxyUrl);
+                if (!response.ok) {
                     throw new Error(`HTTP error: ${response.status}`);
-                return response.text();
-            })
-            .then((str) =>
-                new window.DOMParser().parseFromString(str, "text/xml")
-            )
-            .then((data) => {
-                const items = data.querySelectorAll("item");
-                const fetchedPosts = [];
+                }
 
-                items.forEach((item) => {
-                    const title =
-                        item.querySelector("title")?.textContent ||
-                        "Sin título";
+                const str = await response.text();
+                const data = new window.DOMParser().parseFromString(
+                    str,
+                    "text/xml"
+                );
+
+                const items = data.querySelectorAll("item");
+                // Usamos Array.from().map() para un enfoque más funcional y moderno
+                const fetchedPosts = Array.from(items).map((item) => {
+                    const title = item.querySelector("title")?.textContent || "Sin título";
                     const link = item.querySelector("link")?.textContent || "#";
-                    const descriptionHTML =
-                        item.querySelector("description")?.textContent || "";
+                    const descriptionHTML = item.querySelector("description")?.textContent || "";
+                    
+                    // Crear un elemento temporal para parsear el HTML de la descripción
                     const tempDiv = document.createElement("div");
                     tempDiv.innerHTML = descriptionHTML;
 
                     const imgTag = tempDiv.querySelector("img");
                     const imageUrl = imgTag ? imgTag.src : "";
-                    if (imgTag) imgTag.remove();
+                    if (imgTag) imgTag.remove(); // Quitar la imagen para no duplicarla en el texto
 
-                    const summaryText = (
-                        tempDiv.textContent ||
-                        tempDiv.innerText ||
-                        ""
-                    ).trim();
+                    const summaryText = (tempDiv.textContent || tempDiv.innerText || "").trim();
 
-                    fetchedPosts.push({
+                    return {
                         title,
                         link,
                         imageUrl,
-                        summary:
-                            summaryText.substring(0, 200) +
-                            (summaryText.length > 200 ? "..." : ""),
-                    });
+                        summary: summaryText.substring(0, 200) + (summaryText.length > 200 ? "..." : ""),
+                    };
                 });
 
                 setPosts(fetchedPosts);
-                setLoading(false);
-            })
-            .catch((err) => {
+            } catch (err) {
                 console.error("Error al cargar entradas del blog: ;(", err);
                 setError("No se pudieron cargar las entradas del blog.");
+            } finally {
+                // Esto se ejecuta siempre, tanto si hay éxito como si hay error
                 setLoading(false);
-            });
+            }
+        };
+
+        fetchPosts();
     }, []);
 
     const latestPost = posts.length > 0 ? posts[0] : null;

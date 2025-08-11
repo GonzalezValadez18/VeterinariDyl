@@ -150,7 +150,7 @@ const Header = () => {
                             <li className="nav-item">
                                 <a
                                     className="nav-link active"
-                                    href="#blog"
+                                    href="https://dyl-cuidando-huellitas.blogspot.com/"
                                     onClick={handleCloseNavbar}
                                 >
                                     Blog
